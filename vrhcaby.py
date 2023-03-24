@@ -1,3 +1,5 @@
+# Jen jsem přepsal myšlenku z emailu co nám poslal pan Fišer
+
 from random import randint
 
 class Hra:  #herní deska
