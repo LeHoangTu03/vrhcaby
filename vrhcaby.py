@@ -22,6 +22,7 @@ print("Andreji kurva vole piča vyhulená")
 
 # git branch tridahrac_tu
 # git switch tridahrac_tu
+# git branch -d tridahrac_tu (delete)
 
 class Hrac:
     pass
