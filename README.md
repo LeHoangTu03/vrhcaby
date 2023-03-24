@@ -9,5 +9,12 @@ Tohle je nejhorší repíček
     ) (
     """
 
+konfigurace
+git config user.email "email haha"
+git config user.name "tvoje mama lol"
+
 git add .
-git commit
+git commit -m "poznamka"
+git push
+
+git pull
