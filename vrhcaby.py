@@ -3,7 +3,7 @@ def f(x):
 
 print("Hello World")
 
-print("Andreji kurva vole piča vhulená")
+print("Andreji kurva vole piča nakáry")
 
 # TADY MAS TY KOMENTARE
 # konfigurace
