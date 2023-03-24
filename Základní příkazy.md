@@ -1,4 +1,4 @@
-# Základní příkazy
+# Základní příkazy v githubu
 
 Přidat vše:                 git add . (nebo *)
 Přidat komentář:            git commit -m "komentar ke zmene"
