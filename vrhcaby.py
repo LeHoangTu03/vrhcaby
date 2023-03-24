@@ -5,6 +5,8 @@ print("Hello World")
 
 print("Andreji kurva vole piča vyhulená")
 
+#tebe přepíšu
+
 # TADY MAS TY KOMENTARE
 # konfigurace
 # git config user.email "email"
