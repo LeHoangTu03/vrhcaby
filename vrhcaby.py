@@ -3,8 +3,6 @@ def f(x):
 
 print("Hello World")
 
-print("Andreji kurva vole piča vhulená")
-
 # TADY MAS TY KOMENTARE
 # konfigurace
 # git config user.email "email"
@@ -15,3 +13,5 @@ print("Andreji kurva vole piča vhulená")
 
 # git push
 # git pull
+
+print("Dal bych si závitky")
