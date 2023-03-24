@@ -19,3 +19,9 @@ print("Andreji kurva vole piča vyhulená")
 
 # git push
 # git pull
+
+# git branch tridahrac_tu
+# git switch tridahrac_tu
+
+class Hrac:
+    pass
