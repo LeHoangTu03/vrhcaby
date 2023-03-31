@@ -1,15 +1,20 @@
-#Instalace balíků
+# Instalace balíků
 ## pip install numpy
 
-#1. jak spustit IDLE = >>>
-## CMD > python
+# 1. Spuštění IDLE
+CMD > python
 
-#2. python -m venv venv [<-název]
+# 2. Vytvoření vitruálního prostředí
+python -m venv venv [<-název]
 
-#3. aktivace
-## venv\scripts\activate
+# 3. aktivace
+CMD > venv\scripts\activate
 
-#pip freeze > requirements.txt
-#pip install -r requirements.txt
+# Jaký balíčky se používají
+## Jaký balíčky používám
+CMD > pip freeze > requirements.txt
+## Jak ty balíčky nainstalovat
+CMD > pip install -r requirements.txt
 
-#ctrl + shift + p > > python select interpreter
+# Python interpreter ve VS CodeC
+Ctrl + Shift + P > python select interpreter
