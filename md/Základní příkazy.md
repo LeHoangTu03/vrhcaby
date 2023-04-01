@@ -2,6 +2,7 @@
 
 Přidat vše:                 git add . (nebo *)
 Přidat komentář:            git commit -m "komentar ke zmene"
+Přidá původní komentář:     git commit --no-edit
 Update z lokálu na server:  git push
 Update ze serveru na lokál: git pull
 
