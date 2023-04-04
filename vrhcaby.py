@@ -63,8 +63,8 @@ def hra(hrac): # spouští hru
     hra = Hra()
     input("Pro hod kostkami stiskni libovolnou klávesu")
     print(hra.dvojkostka())
-    for i in herni_pole:
-        print(i)
+    # for i in herni_pole:
+    #     print(i)
 
 
 if __name__ == "__main__": # zjišťuje zda se spouští jako program

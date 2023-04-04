@@ -6,3 +6,6 @@
 `='\(_)/`='
     ) (
     """
+
+## Bůh programování
+![Spasitel](Obrazky/Jiri-Fiser.jpg)
