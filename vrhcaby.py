@@ -1,5 +1,6 @@
 # 24.3. Jen jsem přepsal myšlenku z emailu co nám poslal pan Fišer
 # 31.3. Úprava úvodu hry
+# 4.4. Rada rozhodla žer pokud se dostaneme k AI tak ho nazveme Gandalf
 
 from random import randint
 
