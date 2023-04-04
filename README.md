@@ -10,4 +10,4 @@
 ## Bůh programování
 ![Spasitel](Obrazky/Jiri-Fiser.jpg)
 
-![Jiri](https://necyklopedie.org/wiki/Soubor:Jiri_Skvor.jpg)
+![Jiri](Obrazky/Jiri-Skvor.jpg)
