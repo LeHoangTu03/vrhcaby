@@ -14,12 +14,19 @@ BLACK_STONE = pygame.transform.scale(BLACK_STONE_IMAGE, (50, 50))
 WHITE_STONE_IMAGE = pygame.image.load(os.path.join('Obrazky', 'white_stone.png'))
 WHITE_STONE = pygame.transform.scale(WHITE_STONE_IMAGE, (50, 50))
 
+class Triangle:
+    def __init__(self, point1, point2, point3, position):
+        self.point1 = point1
+        self.point2 = point2
+        self.point3 = point3
+        self.position = position
+
 triangle_color = (255, 0, 0)  # Červená (R, G, B)
 
-# Body trojúhelníku (x, y)
-point1 = (0, 0)
-point2 = (300, 300)
-point3 = (500, 300)
+# # Body trojúhelníku (x, y)
+# point1 = (0, 0)
+# point2 = (300, 300)
+# point3 = (500, 300)
 
 # Funkce, která se spustí po kliknutí na trojúhelník
 def on_triangle_click():
@@ -38,8 +45,27 @@ def draw_window():
     WIN.blit(BLACK_STONE, (1050, 50))
     WIN.blit(WHITE_STONE, (1050, 750))
     # draw_stones()
-    pygame.draw.polygon(WIN, triangle_color, [point1, point2, point3])
+    draw_board()
     pygame.display.update()
+
+def draw_board():
+    # Vytvoření dvourozměrného pole 2x12
+    triangle_array = [[None] * 12 for _ in range(2)]
+
+    # Generování trojúhelníků a jejich umístění do pole
+    for i in range(2):
+        for j in range(12):
+            # Generování bodů pro trojúhelník
+            point1 = (j * WIDTH/12, i * WIDTH/12)
+            point2 = (j * WIDTH/12 + 30, i * WIDTH/12)
+            point3 = (j * HEIGHT/2 + 15, i * HEIGHT/2 + 30)
+            points = [point1, point2, point3]
+
+            # Vytvoření trojúhelníku a uložení do pole
+            triangle = Triangle(point1, point2, point3, [i, j])
+            triangle_array[i][j] = triangle
+
+            pygame.draw.polygon(WIN, triangle_color, points)
 
 def draw_stones():
     for i in range(0, 2):
@@ -65,17 +91,17 @@ def main():
             #Zavírání okna
             if event.type == pygame.QUIT:
                 run = False
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                if pygame.mouse.get_pressed()[0]:  # Zkontrolujte, zda bylo kliknuto levým tlačítkem myši
-                    x, y = pygame.mouse.get_pos()
-                    # Kontrola, zda bylo kliknuto uvnitř trojúhelníka
-                    if (point1[0] <= x <= point3[0] and
-                        point1[1] <= y <= point2[1]):
-                        on_triangle_click()
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                if pygame.mouse.get_pressed()[0]:
-                    if is_clicked_on_image(BLACK_STONE):
-                        print("Kliknuto na obrázek!")
+            # elif event.type == pygame.MOUSEBUTTONDOWN:
+            #     if pygame.mouse.get_pressed()[0]:  # Zkontrolujte, zda bylo kliknuto levým tlačítkem myši
+            #         x, y = pygame.mouse.get_pos()
+            #         # Kontrola, zda bylo kliknuto uvnitř trojúhelníka
+            #         if (point1[0] <= x <= point3[0] and
+            #             point1[1] <= y <= point2[1]):
+            #             on_triangle_click()
+            # elif event.type == pygame.MOUSEBUTTONDOWN:
+            #     if pygame.mouse.get_pressed()[0]:
+            #         if is_clicked_on_image(BLACK_STONE):
+            #             print("Kliknuto na obrázek!")
     
         draw_window()
 
@@ -83,3 +109,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
